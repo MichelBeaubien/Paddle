@@ -1,11 +1,24 @@
-header {
-    background-color: silver;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+@import '../assets/public/styles/variables';
 
-    img {
-        height: 100px;
+.header {
+    background-color: $lightBlue;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    padding: 10px;
+
+    .logo-container {
+        background-color: #FFF;
+        border-radius: 50%;
+        padding: 5px;
+
+        img {
+            height: 100px;
+        }
+
+        @media #{$small-only} {
+            display: none;
+        }
     }
 
     nav {

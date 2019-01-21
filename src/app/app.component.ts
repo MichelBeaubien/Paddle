@@ -12,6 +12,5 @@ export class AppComponent implements OnInit {
      * Init
      */
     public ngOnInit(): void {
-        console.log('init');
     }
 }
