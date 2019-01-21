@@ -7,11 +7,13 @@ import {HomeComponent} from './home/home.component';
 import {ShowcaseComponent} from './showcase/showcase.component';
 import {ContactComponent} from './contact/contact.component';
 import {RouterModule, Routes} from '@angular/router';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'showcase', component: ShowcaseComponent},
     {path: 'contact', component: ContactComponent},
+    {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
@@ -19,7 +21,8 @@ const routes: Routes = [
         AppComponent,
         HomeComponent,
         ShowcaseComponent,
-        ContactComponent
+        ContactComponent,
+        PageNotFoundComponent
     ],
     imports: [
         BrowserModule,
