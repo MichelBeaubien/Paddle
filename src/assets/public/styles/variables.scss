@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Bangers');
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
+/** Foundation scss */
+@import '../../../../node_modules/foundation/scss/foundation';
 
 /** Brand Colors */
 $lightBlue: #3F9EB7;
@@ -13,7 +13,3 @@ $grey: #545E69;
 /** Grey Scale Colors */
 $darkWhite: darken(#FFF, 2.5%);
 $darkerWhite: darken(#FFF, 5%);
-
-/** Fonts */
-$NotoSans: 'Noto Sans', sans-serif;
-$Bangers: 'Bangers', cursive;

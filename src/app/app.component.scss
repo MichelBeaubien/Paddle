@@ -49,6 +49,10 @@
                 color: $lightBlue;
             }
         }
+
+        @media #{$medium} {
+            display: none;
+        }
     }
 
     .header-navigation {
@@ -92,74 +96,61 @@
 
                         span {
                             display: none;
+
+                            @media #{$small} {
+                                display: block;
+                            }
+                        }
+
+                        i.fa {
+
+                            @media #{$small} {
+                                display: none;
+                            }
                         }
 
                         &:hover,
                         &.active {
                             color: $lightBlue;
                         }
-                    }
-                }
-            }
-        }
-    }
-}
 
-@media only screen and (min-width: 641px) {
-    .header {
-        align-items: flex-end;
-        flex-direction: row;
-        justify-content: flex-start;
-
-        .header-navigation {
-            border-top: none;
-            margin: 0;
-            padding: 0;
-
-            .navigation {
-                ul {
-                    li {
-                        a {
+                        @media #{$small} {
                             font-size: 14px;
-
-                            span {
-                                display: block;
-                            }
-
-                            i.fa {
-                                display: none;
-                            }
                         }
                     }
-                }
-            }
-        }
-    }
-}
 
-@media only screen and (min-width: 1024px) {
-    .header {
-        align-items: unset;
-        justify-content: space-between;
-
-        .mobile-nav-container {
-            display: none;
-        }
-
-        .header-navigation {
-            display: flex !important;
-            width: auto;
-
-            .navigation {
-                ul {
-                    align-items: flex-end;
-                    flex-direction: column;
-
-                    li {
+                    @media #{$medium} {
                         width: auto;
                     }
                 }
+
+                @media #{$medium} {
+                    align-items: flex-end;
+                    flex-direction: column;
+                }
             }
         }
+
+        @media #{$small} {
+            border-top: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        @media #{$medium} {
+            display: flex !important;
+            width: auto;
+        }
+    }
+
+    @media #{$small} {
+        align-items: flex-end;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    @media #{$medium} {
+        align-items: unset;
+        justify-content: space-between;
     }
 }

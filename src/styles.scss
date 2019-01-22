@@ -1,4 +1,19 @@
+/** Variables */
 @import 'assets/public/styles/variables';
+
+/** Foundation scss */
+@import '../node_modules/foundation/scss/foundation';
+
+body,
+app-root {
+    background-color: $darkWhite;
+    display: flex;
+    flex-direction: column;
+    font-family: $body-font-family;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+}
 
 h1,
 h2,
@@ -6,18 +21,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $Bangers;
-}
-
-body,
-app-root {
-    background-color: $darkWhite;
-    display: flex;
-    flex-direction: column;
-    font-family: $NotoSans;
-    min-height: 100vh;
-    position: relative;
-    width: 100%;
+    font-family: $header-font-family;
 }
 
 a {
