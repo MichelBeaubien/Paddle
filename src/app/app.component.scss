@@ -1,4 +1,5 @@
 @import '../assets/public/styles/variables';
+@import '../assets/public/styles/main';
 
 .header {
     background-color: $lightBlue;
@@ -14,10 +15,6 @@
 
         img {
             height: 100px;
-        }
-
-        @media #{$small-only} {
-            display: none;
         }
     }
 

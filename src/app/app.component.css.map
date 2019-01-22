@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAEA,OAAQ;EACJ,gBAAgB,ECHR,OAAO;EDIf,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,CAAC;EACZ,SAAS,EAAE,IAAI;EACf,OAAO,EAAE,IAAI;EAEb,uBAAgB;IACZ,gBAAgB,EAAE,IAAI;IACtB,aAAa,EAAE,GAAG;IAClB,OAAO,EAAE,GAAG;IAEZ,2BAAI;MACA,MAAM,EAAE,KAAK",
-"sources": ["app.component.scss","../assets/public/styles/variables.scss"],
+"mappings": "AAAA,IAAK;EACD,WAAW,EAAE,UAAU;EACvB,gBAAgB,EAAE,OAAiB;EACnC,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,UAAU;EAC3B,UAAU,EAAE,KAAK;EACjB,QAAQ,EAAE,QAAQ;;ACJtB,OAAQ;EACJ,gBAAgB,ECJR,OAAO;EDKf,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,CAAC;EACZ,SAAS,EAAE,IAAI;EACf,OAAO,EAAE,IAAI;EAEb,uBAAgB;IACZ,gBAAgB,EAAE,IAAI;IACtB,aAAa,EAAE,GAAG;IAClB,OAAO,EAAE,GAAG;IAEZ,2BAAI;MACA,MAAM,EAAE,KAAK",
+"sources": ["../assets/public/styles/main.scss","app.component.scss","../assets/public/styles/variables.scss"],
 "names": [],
 "file": "app.component.css"
 }
