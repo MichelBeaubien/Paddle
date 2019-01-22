@@ -1,3 +1,13 @@
+.component-container {
+  display: flex;
+  flex-grow: 1; }
 
+.home-component .image-container {
+  background-image: url("../../assets/public/images/main_steph.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100%; }
 
 /*# sourceMappingURL=home.component.css.map */

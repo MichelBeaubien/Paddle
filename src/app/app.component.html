@@ -5,17 +5,18 @@
         </a>
     </div>
 
-    <div class="header-navigation">
-        <div class="mobile-nav-container">
-            <button class="button transition"
-                    (click)="mobileMenu = !mobileMenu"
-                    [class.active]="mobileMenu">
-                <i class="fa"
-                   [class.fa-bars]="!mobileMenu"
-                   [class.fa-close]="mobileMenu" aria-hidden="true"></i>
-            </button>
-        </div>
-        <nav class="navigation" [class.visible]="mobileMenu">
+    <div class="mobile-nav-container">
+        <button class="button transition"
+                (click)="mobileMenu = !mobileMenu"
+                [class.active]="mobileMenu">
+            <i class="fa"
+               [class.fa-bars]="!mobileMenu"
+               [class.fa-close]="mobileMenu" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <div class="header-navigation" [class.visible]="mobileMenu">
+        <nav class="navigation">
             <ul>
                 <li>
                     <a routerLink="/home" routerLinkActive="active" class="transition">
