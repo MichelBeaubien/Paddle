@@ -1,10 +1,20 @@
 @import 'assets/public/styles/variables';
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $Bangers;
+}
+
 body,
 app-root {
     background-color: $darkWhite;
     display: flex;
     flex-direction: column;
+    font-family: $NotoSans;
     min-height: 100vh;
     position: relative;
     width: 100%;

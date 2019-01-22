@@ -1,5 +1,8 @@
-/** Website Colors */
-/** Grey Scale */
+@import url("https://fonts.googleapis.com/css?family=Bangers");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+/** Brand Colors */
+/** Grey Scale Colors */
+/** Fonts */
 .header {
   align-items: center;
   background-color: #545E69;
