@@ -10,7 +10,15 @@ app-root {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 *:focus,
 *:hover {
-    outline: none;
+    outline: none !important;
+}
+
+.transition {
+    transition: all 0.3s ease;
 }

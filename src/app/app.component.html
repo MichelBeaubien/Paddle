@@ -1,33 +1,43 @@
 <header class="header">
     <div class="logo-container">
-        <img src="{{logo}}" alt="Logo"/>
+        <a routerLink="/home">
+            <img src="{{logo}}" alt="Logo"/>
+        </a>
     </div>
 
     <div class="header-navigation">
         <div class="mobile-nav-container">
-            <button class="button">
-                <i class="fa fa-pencil" aria-hidden="true"></i>
+            <button class="button transition"
+                    (click)="mobileMenu = !mobileMenu"
+                    [class.active]="mobileMenu">
+                <i class="fa"
+                   [class.fa-bars]="!mobileMenu"
+                   [class.fa-close]="mobileMenu" aria-hidden="true"></i>
             </button>
         </div>
-        <nav class="navigation">
+        <nav class="navigation" [class.visible]="mobileMenu">
             <ul>
                 <li>
-                    <a routerLink="/home" routerLinkActive="active">Home</a>
+                    <a routerLink="/home" routerLinkActive="active" class="transition">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <span>Home</span>
+                    </a>
                 </li>
                 <li>
-                    <a routerLink="/showcase" routerLinkActive="active">Showcase</a>
+                    <a routerLink="/showcase" routerLinkActive="active" class="transition">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <span>Showcase</span>
+                    </a>
                 </li>
                 <li>
-                    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+                    <a routerLink="/contact" routerLinkActive="active" class="transition">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <span>Contact</span>
+                    </a>
                 </li>
             </ul>
         </nav>
     </div>
 </header>
-
-<div>
-    <h3>Hello There!</h3>
-    <p>My Name is Stephane Beaubien Mutherfucker</p>
-</div>
 
 <router-outlet></router-outlet>
