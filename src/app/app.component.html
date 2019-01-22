@@ -3,19 +3,26 @@
         <img src="{{logo}}" alt="Logo"/>
     </div>
 
-    <nav class="header-navigation">
-        <ul>
-            <li>
-                <a routerLink="/home" routerLinkActive="active">Home</a>
-            </li>
-            <li>
-                <a routerLink="/showcase" routerLinkActive="active">Showcase</a>
-            </li>
-            <li>
-                <a routerLink="/contact" routerLinkActive="active">Contact</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="header-navigation">
+        <div class="mobile-nav-container">
+            <button class="button">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+            </button>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li>
+                    <a routerLink="/home" routerLinkActive="active">Home</a>
+                </li>
+                <li>
+                    <a routerLink="/showcase" routerLinkActive="active">Showcase</a>
+                </li>
+                <li>
+                    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <div>

@@ -1,6 +1,12 @@
-$lightBlue: #3588B2;
+/** Website Colors */
+$lightBlue: #3F9EB7;
 $blue: #2D7BA7;
 $darkBlue: #163D54;
 $lightGreen: #A1B64A;
 $darkGreen: #708134;
 $lightGrey: #999999;
+$grey: #545E69;
+
+/** Grey Scale */
+$darkWhite: darken(#FFF, 2.5%);
+$darkerWhite: darken(#FFF, 5%);

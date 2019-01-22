@@ -1,23 +1,27 @@
-body {
-  align-items: flex-start;
-  background-color: #e6e6e6;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-height: 100vh;
-  position: relative; }
-
+/** Website Colors */
+/** Grey Scale */
 .header {
-  background-color: #3588B2;
+  background-color: #3F9EB7;
   display: flex;
-  flex-grow: 1;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding: 10px; }
   .header .logo-container {
+    align-items: center;
     background-color: #FFF;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
     padding: 5px; }
     .header .logo-container img {
-      height: 100px; }
+      border-radius: 50%;
+      display: block;
+      height: 100px;
+      max-height: 100px; }
+  .header .header-navigation {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
 
 /*# sourceMappingURL=app.component.css.map */

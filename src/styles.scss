@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'assets/public/styles/variables';
+
+body,
+app-root {
+    background-color: $darkWhite;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
+*:focus,
+*:hover {
+    outline: none;
+}
