@@ -7,6 +7,11 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AppComponent implements OnInit {
     /**
+     * Footer
+     */
+    public footer = false;
+
+    /**
      * Website Logo
      */
     public logo = '../assets/public/images/logo.png';
