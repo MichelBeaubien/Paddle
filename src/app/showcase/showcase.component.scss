@@ -1,0 +1,12 @@
+.showcase-component {
+    .images {
+        div {
+            display: none;
+
+            &.show,
+            &.showAll {
+                display: flex;
+            }
+        }
+    }
+}

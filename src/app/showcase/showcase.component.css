@@ -1,3 +1,6 @@
-
+.showcase-component .images div {
+  display: none; }
+  .showcase-component .images div.show, .showcase-component .images div.showAll {
+    display: flex; }
 
 /*# sourceMappingURL=showcase.component.css.map */

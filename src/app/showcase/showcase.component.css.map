@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAEQ,+BAAI;EACA,OAAO,EAAE,IAAI;EAEb,6EACU;IACN,OAAO,EAAE,IAAI",
+"sources": ["showcase.component.scss"],
 "names": [],
 "file": "showcase.component.css"
 }

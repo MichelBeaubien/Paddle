@@ -1,3 +1,24 @@
-<p>
-  showcase works!
-</p>
+<div class="component-container showcase-component">
+    <div>
+        <ul>
+            <li *ngFor="let show of showcases">
+                <button class="button" (click)="showcase(show)">
+                    {{show}}
+                </button>
+            </li>
+            <li>
+                <button class="button" (click)="showcase('all')">All</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="images">
+        <div [class.show]="showCase === 'Fish'" [class.showAll]="showEverything">
+            <img src="../../assets/public/images/showcase/fish.jpg" alt="Fish"/>
+        </div>
+
+        <div [class.show]="showCase === 'Cartoon'" [class.showAll]="showEverything">
+            <img src="../../assets/public/images/showcase/cartoon.jpg" alt="Cartoon"/>
+        </div>
+    </div>
+</div>
