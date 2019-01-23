@@ -1,4 +1,4 @@
-@import '../assets/public/styles/variables';
+@import '../../node_modules/foundation/scss/foundation';
 
 .header {
     align-items: center;
@@ -10,18 +10,22 @@
     padding: 10px;
 
     .logo-container {
-        align-items: center;
         background-color: #FFF;
         border-radius: 50%;
         display: flex;
-        justify-content: center;
-        padding: 5px;
+        height: 70px;
+        width: 70px;
 
-        img {
-            border-radius: 50%;
-            display: block;
-            height: 75px;
-            max-height: 75px;
+        a {
+            align-items: center;
+            border-radius: $global-rounded;
+            display: flex;
+            justify-content: center;
+
+            img {
+                border-radius: 50%;
+                display: block;
+            }
         }
     }
 
@@ -46,7 +50,7 @@
 
             &:hover,
             &.active {
-                color: $lightBlue;
+                color: $primary-color;
             }
         }
 
@@ -111,7 +115,7 @@
 
                         &:hover,
                         &.active {
-                            color: $lightBlue;
+                            color: $primary-color;
                         }
 
                         @media #{$small} {

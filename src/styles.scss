@@ -1,12 +1,9 @@
 /** Variables */
-@import 'assets/public/styles/variables';
-
-/** Foundation scss */
 @import '../node_modules/foundation/scss/foundation';
 
 body,
 app-root {
-    background-color: $darkWhite;
+    background-color: $body-bg;
     display: flex;
     flex-direction: column;
     font-family: $body-font-family;
