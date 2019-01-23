@@ -2,11 +2,11 @@
 
 .home-component {
     .image-container {
-        background-image: url('../../assets/public/images/main_steph.jpg');
+        background-image: url('../../assets/public/images/back_one.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 400px;
+        height: calc(100vh - 90px);
         width: 100%;
     }
 }

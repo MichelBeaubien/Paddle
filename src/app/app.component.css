@@ -3198,13 +3198,14 @@ a.th {
     max-width: 800px; }
 
 .header {
-  align-items: center;
+  align-items: flex-end;
   background-color: #545E69;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   position: relative;
-  padding: 10px; }
+  padding: 10px;
+  width: 100%; }
   .header .logo-container {
     background-color: #FFF;
     border-radius: 50%;
@@ -3241,11 +3242,11 @@ a.th {
       .header .mobile-nav-container {
         display: none; } }
   .header .header-navigation {
-    border-top: thin solid #49515b;
+    border: none;
     display: none;
-    margin-top: 10px;
-    padding-top: 10px;
-    width: 100%; }
+    margin: 0;
+    padding: 0;
+    width: auto; }
     .header .header-navigation.visible {
       display: flex; }
     .header .header-navigation .navigation {
@@ -3261,7 +3262,10 @@ a.th {
           display: flex;
           flex-grow: 1;
           justify-content: center;
-          width: 33.333333%; }
+          margin-right: 20px;
+          width: auto; }
+          .header .header-navigation .navigation ul li:last-child {
+            margin-right: 0; }
           .header .header-navigation .navigation ul li a {
             align-items: center;
             color: #FFF;
@@ -3303,23 +3307,8 @@ a.th {
             @media only screen and (min-width: 1024px) {
               .header .header-navigation .navigation ul li a {
                 font-size: 14px; } }
-          @media only screen and (min-width: 641px) {
-            .header .header-navigation .navigation ul li {
-              margin-right: 20px;
-              width: auto; }
-              .header .header-navigation .navigation ul li:last-child {
-                margin-right: 0; } }
     @media only screen and (min-width: 641px) {
       .header .header-navigation {
-        border: none;
-        display: flex !important;
-        margin: 0;
-        padding: 0;
-        width: auto; } }
-  @media only screen and (min-width: 641px) {
-    .header {
-      align-items: flex-end;
-      flex-direction: row;
-      justify-content: space-between; } }
+        display: flex !important; } }
 
 /*# sourceMappingURL=app.component.css.map */
