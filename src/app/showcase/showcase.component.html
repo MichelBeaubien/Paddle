@@ -2,79 +2,53 @@
     <div class="showcase-button-wrapper">
         <ul class="showcase-list-wrapper">
             <li *ngFor="let show of showcases" class="showcase-list">
-                <button class="showcase-button" (click)="showcase(show)">
+                <button class="showcase-button"
+                        (click)="showcase(show)"
+                        [class.active]="showCase === show && !showEverything">
                     {{show}}
                 </button>
             </li>
             <li class="showcase-list show-all-list">
-                <button class="showcase-button" (click)="showcase('all')">All</button>
+                <button class="showcase-button"
+                        (click)="showcase('all')"
+                        [class.active]="showEverything" i18n="@@all">
+                    All
+                </button>
             </li>
         </ul>
     </div>
 
-    <div class="images">
-        <div [class.show]="showCase === 'Antique'" [class.showAll]="showEverything">
-            <ul>
-                <li *ngFor="let img of images.antique; let i = index">
-                    <img src="{{img}}" alt="Antique Inspired Paddle - {{i+1}}"/>
-                </li>
-            </ul>
+    <div class="showcase-images">
+        <div class="showcase-images-wrapper" [class.show]="showCase === 'Antique'" [class.showAll]="showEverything">
+            <div class="images" *ngFor="let img of images.antique" [style.backgroundImage]="'url('+ img +')'"></div>
         </div>
 
-        <div [class.show]="showCase === 'Canada'" [class.showAll]="showEverything">
-            <ul>
-                <li *ngFor="let img of images.canada; let i = index">
-                    <img src="{{img}}" alt="Canada Inspired Paddle - {{i+1}}"/>
-                </li>
-            </ul>
+        <div class="showcase-images-wrapper" [class.show]="showCase === 'Canada'" [class.showAll]="showEverything">
+            <div class="images" *ngFor="let img of images.canada" [style.backgroundImage]="'url('+ img +')'"></div>
         </div>
 
-        <div [class.show]="showCase === 'Cartoon'" [class.showAll]="showEverything">
-            <ul>
-                <li *ngFor="let img of images.cartoon; let i = index">
-                    <img src="{{img}}" alt="Cartoon Inspired Paddle - {{i+1}}"/>
-                </li>
-            </ul>
+        <div class="showcase-images-wrapper" [class.show]="showCase === 'Cartoon'" [class.showAll]="showEverything">
+            <div class="images" *ngFor="let img of images.cartoon" [style.backgroundImage]="'url('+ img +')'"></div>
         </div>
 
-        <div [class.show]="showCase === 'Fish'" [class.showAll]="showEverything">
-            <ul>
-                <li *ngFor="let img of images.fish; let i = index">
-                    <img src="{{img}}" alt="Fish Inspired Paddle - {{i+1}}"/>
-                </li>
-            </ul>
+        <div class="showcase-images-wrapper" [class.show]="showCase === 'Fish'" [class.showAll]="showEverything">
+            <div class="images" *ngFor="let img of images.fish" [style.backgroundImage]="'url('+ img +')'"></div>
         </div>
 
-        <div [class.show]="showCase === 'Hockey'" [class.showAll]="showEverything">
-            <ul>
-                <li *ngFor="let img of images.hockey; let i = index">
-                    <img src="{{img}}" alt="Hockey Inspired Paddle - {{i+1}}"/>
-                </li>
-            </ul>
+        <div class="showcase-images-wrapper" [class.show]="showCase === 'Hockey'" [class.showAll]="showEverything">
+            <div class="images" *ngFor="let img of images.hockey" [style.backgroundImage]="'url('+ img +')'"></div>
         </div>
 
-        <div [class.show]="showCase === 'Locations'" [class.showAll]="showEverything">
-            <ul>
-                <li *ngFor="let img of images.locations; let i = index">
-                    <img src="{{img}}" alt="Locations Inspired Paddle - {{i+1}}"/>
-                </li>
-            </ul>
+        <div class="showcase-images-wrapper" [class.show]="showCase === 'Locations'" [class.showAll]="showEverything">
+            <div class="images" *ngFor="let img of images.locations" [style.backgroundImage]="'url('+ img +')'"></div>
         </div>
 
-        <div [class.show]="showCase === 'Pride'" [class.showAll]="showEverything">
-            <ul>
-                <li *ngFor="let img of images.pride; let i = index">
-                    <img src="{{img}}" alt="Pride Inspired Paddle - {{i+1}}"/>
-                </li>
-            </ul>
+        <div class="showcase-images-wrapper" [class.show]="showCase === 'Pride'" [class.showAll]="showEverything">
+            <div class="images" *ngFor="let img of images.pride" [style.backgroundImage]="'url('+ img +')'"></div>
         </div>
 
-        <div [class.show]="showCase === 'Wilderness'" [class.showAll]="showEverything">
-            <ul>
-                <li *ngFor="let img of images.wilderness; let i = index">
-                    <img src="{{img}}" alt="Wilderness Inspired Paddle - {{i+1}}"/>
-                </li>
-            </ul>
+        <div class="showcase-images-wrapper" [class.show]="showCase === 'Wilderness'" [class.showAll]="showEverything">
+            <div class="images" *ngFor="let img of images.wilderness" [style.backgroundImage]="'url('+ img +')'"></div>
         </div>
     </div>
 </div>
