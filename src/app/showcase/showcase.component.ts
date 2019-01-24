@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Images} from '../../assets/public/scripts/images';
 
 @Component({
     selector: 'app-showcase',
@@ -7,22 +8,27 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ShowcaseComponent implements OnInit {
     /**
+     * Images for the showcase
+     */
+    public images = new Images().images;
+
+    /**
      * Showcase Category
      */
-    public showCase = 'Fish';
+    public showCase = 'Antique';
 
     /**
      * Showcases array
      */
     public showcases = [
-        'Fish',
-        'Cartoon',
-        'Hockey',
         'Antique',
-        'Locations',
-        'Wilderness',
         'Canada',
-        'Pride'
+        'Cartoon',
+        'Fish',
+        'Hockey',
+        'Locations',
+        'Pride',
+        'Wilderness'
     ];
 
     /**
@@ -30,19 +36,21 @@ export class ShowcaseComponent implements OnInit {
      */
     public showEverything = false;
 
-    constructor() {}
+    constructor() {
+    }
 
-    public ngOnInit() {}
+    public ngOnInit() {
+    }
 
     public showcase(showing: string): void {
         if (!showing) {
             return;
         }
-        this.showCase = showing;
-        this.showEverything = false;
         if (showing === 'all') {
             this.showEverything = true;
             return;
         }
+        this.showCase = showing;
+        this.showEverything = false;
     }
 }
