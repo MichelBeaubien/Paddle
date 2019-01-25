@@ -3,34 +3,70 @@
 
 .showcase-component {
     .showcase-button-wrapper {
+        background-color: $grey;
+        border-top: thin solid $white;
         display: flex;
-        padding: 4em;
+        flex: none;
+        padding: 0.5em;
         width: 100%;
 
         .showcase-list-wrapper {
             display: flex;
             flex-wrap: wrap;
+            min-height: 60px;
+            padding-right: 60px;
+            position: relative;
             width: 100%;
 
             .showcase-list {
+                align-items: center;
                 display: flex;
                 flex-grow: 1;
                 justify-content: center;
+                padding: 0.5em;
 
                 .showcase-button {
                     align-items: center;
                     background-color: transparent;
                     border: none;
                     border-radius: 0;
-                    color: $grey;
+                    color: $white;
                     display: flex;
                     font-family: $header-font-family;
                     justify-content: center;
+                    padding: 0;
 
+                    &:hover,
                     &.active {
                         color: $primary-color;
                     }
                 }
+
+                &.show-all-list {
+                    align-items: unset;
+                    height: 100%;
+                    justify-content: unset;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 60px;
+                    z-index: 1;
+
+                    .showcase-button {
+                        background-color: darken($grey, 5%);
+                        color: $white;
+                        width: 100%;
+
+                        &:hover,
+                        &.active {
+                            background-color: $primary-color;
+                        }
+                    }
+                }
+            }
+
+            @media #{$medium} {
+                min-height: 75px;
             }
         }
     }
@@ -42,6 +78,7 @@
 
         .showcase-images-wrapper {
             display: none;
+            flex: none;
             flex-wrap: wrap;
             width: 100%;
 

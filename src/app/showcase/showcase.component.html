@@ -1,15 +1,15 @@
 <div class="component-container showcase-component">
-    <div class="showcase-button-wrapper" [class.sticky]="isSticky">
+    <div class="showcase-button-wrapper">
         <ul class="showcase-list-wrapper">
             <li *ngFor="let show of showcases" class="showcase-list">
-                <button class="showcase-button"
+                <button class="showcase-button transition"
                         (click)="showcase(show)"
                         [class.active]="showCase === show && !showEverything">
                     {{show}}
                 </button>
             </li>
             <li class="showcase-list show-all-list">
-                <button class="showcase-button"
+                <button class="showcase-button transition"
                         (click)="showcase('all')"
                         [class.active]="showEverything">
                     All

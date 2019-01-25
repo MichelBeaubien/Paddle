@@ -3218,28 +3218,55 @@ a.th {
   z-index: 2; }
 
 .showcase-component .showcase-button-wrapper {
+  background-color: #545E69;
+  border-top: thin solid #FFF;
   display: flex;
-  padding: 4em;
+  flex: none;
+  padding: 0.5em;
   width: 100%; }
   .showcase-component .showcase-button-wrapper .showcase-list-wrapper {
     display: flex;
     flex-wrap: wrap;
+    min-height: 60px;
+    padding-right: 60px;
+    position: relative;
     width: 100%; }
     .showcase-component .showcase-button-wrapper .showcase-list-wrapper .showcase-list {
+      align-items: center;
       display: flex;
       flex-grow: 1;
-      justify-content: center; }
+      justify-content: center;
+      padding: 0.5em; }
       .showcase-component .showcase-button-wrapper .showcase-list-wrapper .showcase-list .showcase-button {
         align-items: center;
         background-color: transparent;
         border: none;
         border-radius: 0;
-        color: #545E69;
+        color: #FFF;
         display: flex;
         font-family: "Bangers", cursive;
-        justify-content: center; }
-        .showcase-component .showcase-button-wrapper .showcase-list-wrapper .showcase-list .showcase-button.active {
+        justify-content: center;
+        padding: 0; }
+        .showcase-component .showcase-button-wrapper .showcase-list-wrapper .showcase-list .showcase-button:hover, .showcase-component .showcase-button-wrapper .showcase-list-wrapper .showcase-list .showcase-button.active {
           color: #3F9EB7; }
+      .showcase-component .showcase-button-wrapper .showcase-list-wrapper .showcase-list.show-all-list {
+        align-items: unset;
+        height: 100%;
+        justify-content: unset;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60px;
+        z-index: 1; }
+        .showcase-component .showcase-button-wrapper .showcase-list-wrapper .showcase-list.show-all-list .showcase-button {
+          background-color: #49515b;
+          color: #FFF;
+          width: 100%; }
+          .showcase-component .showcase-button-wrapper .showcase-list-wrapper .showcase-list.show-all-list .showcase-button:hover, .showcase-component .showcase-button-wrapper .showcase-list-wrapper .showcase-list.show-all-list .showcase-button.active {
+            background-color: #3F9EB7; }
+    @media only screen and (min-width: 1024px) {
+      .showcase-component .showcase-button-wrapper .showcase-list-wrapper {
+        min-height: 75px; } }
 .showcase-component .showcase-images {
   display: flex;
   flex-direction: column;
@@ -3247,6 +3274,7 @@ a.th {
   .showcase-component .showcase-images .showcase-images-wrapper {
     display: none;
     flex-wrap: wrap;
+    flex: none;
     width: 100%; }
     .showcase-component .showcase-images .showcase-images-wrapper .images {
       background-position: center;

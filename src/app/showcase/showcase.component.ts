@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Images} from '../../assets/public/scripts/images';
 
 @Component({
@@ -7,8 +7,6 @@ import {Images} from '../../assets/public/scripts/images';
     styleUrls: ['./showcase.component.scss']
 })
 export class ShowcaseComponent implements OnInit {
-    public isSticky = false;
-
     /**
      * Images for the showcase
      */
@@ -37,12 +35,6 @@ export class ShowcaseComponent implements OnInit {
      * Showcase All
      */
     public showEverything = false;
-
-    @HostListener('scroll', ['$event'])
-    private onScroll($event: Event): void {
-        console.log($event.srcElement.scrollLeft, $event.srcElement.scrollTop);
-        // this.isSticky = window.pageYOffset >= 90;
-    }
 
     constructor() {
     }
