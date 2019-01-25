@@ -13,6 +13,16 @@ export class ShowcaseComponent implements OnInit {
     public images = new Images().images;
 
     /**
+     * Image Order for Next / Prev
+     */
+    public imageOrder: string;
+
+    /**
+     * String where image URL will be held
+     */
+    public imageString: string;
+
+    /**
      * Showcase Category
      */
     public showCase = 'Antique';
@@ -42,6 +52,39 @@ export class ShowcaseComponent implements OnInit {
     public ngOnInit() {
     }
 
+    /**
+     * Enlarge the showcase image
+     */
+    public enlarge(image: string, index: string): void {
+        if (!image) {
+            return;
+        }
+        this.imageOrder = index;
+        this.imageString = image;
+    }
+
+    /**
+     * Control Next / Prev Images in Showcase
+     */
+    public orderImage(direction: string, order: string): void {
+        console.log(order);
+        this.imageString = this.imageString.replace(order, '').replace('.jpg', '');
+        console.log(this.imageString);
+
+        // if (direction === 'left') {
+        //     this.imageOrder = order - 1;
+        //     this.imageString = this.imageString + this.imageOrder + '.jpg';
+        // }
+        //
+        // if (direction === 'right') {
+        //     this.imageOrder = order + 1;
+        //     this.imageString = this.imageString + this.imageOrder + '.jpg';
+        // }
+    }
+
+    /**
+     * Show / Hide the proper showcase category
+     */
     public showcase(showing: string): void {
         if (!showing) {
             return;

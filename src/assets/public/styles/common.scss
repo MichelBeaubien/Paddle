@@ -7,16 +7,35 @@
     min-height: calc(100vh - 134px);
     overflow: auto;
 
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+
+    &::-webkit-scrollbar:vertical {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar:horizontal {
+        height: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary-color;
+        border-radius: 0;
+        border: 0 solid #FFF;
+        border-bottom: 0;
+        border-top: 0;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 0;
+        background-color: $body-bg;
+        cursor: pointer;
+    }
+
     @media #{$small} {
         height: calc(100vh - 90px);
         max-height: calc(100vh - 90px);
         min-height: calc(100vh - 90px);
     }
-}
-
-.sticky {
-    background-color: #FFF;
-    position: fixed;
-    top: 90px;
-    z-index: 2;
 }

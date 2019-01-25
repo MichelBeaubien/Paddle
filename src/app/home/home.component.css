@@ -3205,17 +3205,27 @@ a.th {
   max-height: calc(100vh - 134px);
   min-height: calc(100vh - 134px);
   overflow: auto; }
+  .component-container::-webkit-scrollbar {
+    -webkit-appearance: none; }
+  .component-container::-webkit-scrollbar:vertical {
+    width: 6px; }
+  .component-container::-webkit-scrollbar:horizontal {
+    height: 6px; }
+  .component-container::-webkit-scrollbar-thumb {
+    background-color: #3F9EB7;
+    border-radius: 0;
+    border: 0 solid #FFF;
+    border-bottom: 0;
+    border-top: 0; }
+  .component-container::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: #f9f9f9;
+    cursor: pointer; }
   @media only screen and (min-width: 641px) {
     .component-container {
       height: calc(100vh - 90px);
       max-height: calc(100vh - 90px);
       min-height: calc(100vh - 90px); } }
-
-.sticky {
-  background-color: #FFF;
-  position: fixed;
-  top: 90px;
-  z-index: 2; }
 
 .home-component .home-background {
   background-image: url("../../assets/public/images/back_one.jpg");

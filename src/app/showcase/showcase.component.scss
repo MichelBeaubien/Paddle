@@ -80,6 +80,7 @@
             display: none;
             flex: none;
             flex-wrap: wrap;
+            position: relative;
             width: 100%;
 
             .images {
@@ -131,6 +132,42 @@
                 @media #{$medium} {
                     height: 400px;
                     width: 25%;
+                }
+            }
+
+            .enlarge {
+                background-color: rgba(255, 255, 255, 0.5);
+                display: none;
+                flex: none;
+                flex-direction: column;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: 5;
+
+                &.enlarged {
+                    display: flex;
+                }
+
+                .enlarged-button-container {
+                    display: flex;
+                    flex: none;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                .enlarged-image {
+                    align-items: center;
+                    display: flex;
+                    flex-grow: 1;
+                    justify-content: center;
+
+                    img {
+                        display: block;
+                        max-height: 600px;
+                    }
                 }
             }
 
