@@ -1,4 +1,3 @@
-/** Variables */
 @import '../../../node_modules/foundation/scss/foundation';
 @import '../../assets/public/styles/common';
 
@@ -9,7 +8,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         display: flex;
-        height: calc(100vh - 134px);
+        height: 100%;
         position: relative;
         width: 100%;
 
@@ -36,10 +35,6 @@
                 color: $white;
                 font-size: $h1-font-size;
             }
-        }
-
-        @media #{$small} {
-            height: calc(100vh - 90px);
         }
     }
 }

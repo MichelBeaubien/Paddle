@@ -1,4 +1,5 @@
 @import '../../../node_modules/foundation/scss/foundation';
+@import '../../assets/public/styles/common';
 
 .showcase-component {
     .showcase-button-wrapper {
@@ -45,15 +46,55 @@
             width: 100%;
 
             .images {
-                align-items: center;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
                 display: flex;
                 flex-grow: 1;
-                height: 400px;
-                justify-content: center;
-                width: 25%;
+                height: 300px;
+                position: relative;
+                width: 50%;
+
+                .inner-showcase-image-container {
+                    align-items: center;
+                    background-color: rgba($grey, 0.5);
+                    bottom: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    left: 0;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 1;
+
+                    h3 {
+                        color: #FFF;
+                        font-size: $h3-font-size;
+                    }
+
+                    button {
+                        background-color: #FFF;
+                        color: $primary-color;
+                        border: none;
+                    }
+                }
+
+                &:hover {
+                    .inner-showcase-image-container {
+                        opacity: 1;
+                    }
+                }
+
+                @media #{$small} {
+                    width: 33.333333%;
+                }
+
+                @media #{$medium} {
+                    height: 400px;
+                    width: 25%;
+                }
             }
 
             &.show,

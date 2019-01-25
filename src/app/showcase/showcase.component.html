@@ -1,5 +1,5 @@
 <div class="component-container showcase-component">
-    <div class="showcase-button-wrapper">
+    <div class="showcase-button-wrapper" [class.sticky]="isSticky">
         <ul class="showcase-list-wrapper">
             <li *ngFor="let show of showcases" class="showcase-list">
                 <button class="showcase-button"
@@ -11,7 +11,7 @@
             <li class="showcase-list show-all-list">
                 <button class="showcase-button"
                         (click)="showcase('all')"
-                        [class.active]="showEverything" i18n="@@all">
+                        [class.active]="showEverything">
                     All
                 </button>
             </li>
@@ -20,7 +20,15 @@
 
     <div class="showcase-images">
         <div class="showcase-images-wrapper" [class.show]="showCase === 'Antique'" [class.showAll]="showEverything">
-            <div class="images" *ngFor="let img of images.antique" [style.backgroundImage]="'url('+ img +')'"></div>
+            <div class="images" *ngFor="let img of images.antique; let i = index"
+                 [style.backgroundImage]="'url('+ img +')'">
+                <div class="inner-showcase-image-container transition">
+                    <h3>Antique Image {{i+1}}</h3>
+                    <button (click)="enlarge(img)">
+                        <i class="fa fa-expand" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
         <div class="showcase-images-wrapper" [class.show]="showCase === 'Canada'" [class.showAll]="showEverything">

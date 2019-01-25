@@ -1,4 +1,22 @@
 .component-container {
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
+    height: calc(100vh - 134px);
+    max-height: calc(100vh - 134px);
+    min-height: calc(100vh - 134px);
+    overflow: auto;
+
+    @media #{$small} {
+        height: calc(100vh - 90px);
+        max-height: calc(100vh - 90px);
+        min-height: calc(100vh - 90px);
+    }
+}
+
+.sticky {
+    background-color: #FFF;
+    position: fixed;
+    top: 90px;
+    z-index: 2;
 }

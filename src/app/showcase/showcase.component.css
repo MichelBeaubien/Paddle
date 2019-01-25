@@ -3197,6 +3197,26 @@ a.th {
   .f-dropdown.large {
     max-width: 800px; }
 
+.component-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: calc(100vh - 134px);
+  max-height: calc(100vh - 134px);
+  min-height: calc(100vh - 134px);
+  overflow: auto; }
+  @media only screen and (min-width: 641px) {
+    .component-container {
+      height: calc(100vh - 90px);
+      max-height: calc(100vh - 90px);
+      min-height: calc(100vh - 90px); } }
+
+.sticky {
+  background-color: #FFF;
+  position: fixed;
+  top: 90px;
+  z-index: 2; }
+
 .showcase-component .showcase-button-wrapper {
   display: flex;
   padding: 4em;
@@ -3229,15 +3249,43 @@ a.th {
     flex-wrap: wrap;
     width: 100%; }
     .showcase-component .showcase-images .showcase-images-wrapper .images {
-      align-items: center;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       display: flex;
       flex-grow: 1;
-      height: 400px;
-      justify-content: center;
-      width: 25%; }
+      height: 300px;
+      position: relative;
+      width: 50%; }
+      .showcase-component .showcase-images .showcase-images-wrapper .images .inner-showcase-image-container {
+        align-items: center;
+        background-color: rgba(84, 94, 105, 0.5);
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1; }
+        .showcase-component .showcase-images .showcase-images-wrapper .images .inner-showcase-image-container h3 {
+          color: #FFF;
+          font-size: 1.6875em; }
+        .showcase-component .showcase-images .showcase-images-wrapper .images .inner-showcase-image-container button {
+          background-color: #FFF;
+          color: #3F9EB7;
+          border: none; }
+      .showcase-component .showcase-images .showcase-images-wrapper .images:hover .inner-showcase-image-container {
+        opacity: 1; }
+      @media only screen and (min-width: 641px) {
+        .showcase-component .showcase-images .showcase-images-wrapper .images {
+          width: 33.333333%; } }
+      @media only screen and (min-width: 1024px) {
+        .showcase-component .showcase-images .showcase-images-wrapper .images {
+          height: 400px;
+          width: 25%; } }
     .showcase-component .showcase-images .showcase-images-wrapper.show, .showcase-component .showcase-images .showcase-images-wrapper.showAll {
       display: flex; }
 
