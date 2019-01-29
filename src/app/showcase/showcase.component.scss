@@ -123,15 +123,6 @@
                         opacity: 1;
                     }
                 }
-
-                @media #{$small} {
-                    width: 33.333333%;
-                }
-
-                @media #{$medium} {
-                    height: 400px;
-                    width: 25%;
-                }
             }
 
             &.show,

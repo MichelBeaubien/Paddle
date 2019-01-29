@@ -3317,13 +3317,6 @@ a.th {
             border: none; }
         .showcase-component .showcase-images .showcase-images-wrapper .images:hover .inner-showcase-image-container {
           opacity: 1; }
-        @media only screen and (min-width: 641px) {
-          .showcase-component .showcase-images .showcase-images-wrapper .images {
-            width: 33.333333%; } }
-        @media only screen and (min-width: 1024px) {
-          .showcase-component .showcase-images .showcase-images-wrapper .images {
-            height: 400px;
-            width: 25%; } }
       .showcase-component .showcase-images .showcase-images-wrapper.show, .showcase-component .showcase-images .showcase-images-wrapper.showAll {
         display: block; }
 
