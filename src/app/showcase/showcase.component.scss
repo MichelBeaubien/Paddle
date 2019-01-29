@@ -2,6 +2,8 @@
 @import '../../assets/public/styles/common';
 
 .showcase-component {
+    position: relative;
+
     .showcase-button-wrapper {
         background-color: $grey;
         border-top: thin solid $white;
@@ -74,14 +76,12 @@
     .showcase-images {
         display: flex;
         flex-direction: column;
+        height: 100%;
         width: 100%;
 
         .showcase-images-wrapper {
             display: none;
-            flex: none;
-            flex-wrap: wrap;
-            position: relative;
-            width: 100%;
+            height: 100%;
 
             .images {
                 background-position: center;
@@ -89,7 +89,7 @@
                 background-size: cover;
                 display: flex;
                 flex-grow: 1;
-                height: 300px;
+                height: 100%;
                 position: relative;
                 width: 50%;
 
@@ -135,45 +135,9 @@
                 }
             }
 
-            .enlarge {
-                background-color: rgba(255, 255, 255, 0.5);
-                display: none;
-                flex: none;
-                flex-direction: column;
-                height: 100%;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 100%;
-                z-index: 5;
-
-                &.enlarged {
-                    display: flex;
-                }
-
-                .enlarged-button-container {
-                    display: flex;
-                    flex: none;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                }
-
-                .enlarged-image {
-                    align-items: center;
-                    display: flex;
-                    flex-grow: 1;
-                    justify-content: center;
-
-                    img {
-                        display: block;
-                        max-height: 600px;
-                    }
-                }
-            }
-
             &.show,
             &.showAll {
-                display: flex;
+                display: block;
             }
         }
     }

@@ -19,32 +19,16 @@
     </div>
 
     <div class="showcase-images">
-        <div class="showcase-images-wrapper" [class.show]="showCase === 'Antique'" [class.showAll]="showEverything">
-            <div class="images"
-                 *ngFor="let img of images.antique; let i = index"
+        <div class="showcase-images-wrapper"
+             [class.show]="showCase === 'Antique'"
+             [class.showAll]="showEverything">
+            <div class="images" *ngFor="let img of images.antique; let i = index;"
                  [style.backgroundImage]="'url('+ img +')'">
                 <div class="inner-showcase-image-container transition">
                     <h3>Antique Image {{i+1}}</h3>
-                    <button (click)="enlarge(img, i)">
+                    <button>
                         <i class="fa fa-expand" aria-hidden="true"></i>
                     </button>
-                </div>
-            </div>
-            
-            <div class="enlarge" [class.enlarged]="imageString">
-                <div class="enlarged-button-container">
-                    <button>
-                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-                    </button>
-                    <button>
-                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                    </button>
-                    <button (click)="imageString = ''">
-                        <i class="fa fa-close" aria-hidden="true"></i>
-                    </button>
-                </div>
-                <div class="enlarged-image">
-                    <img src="{{imageString}}" alt="Antique Paddle"/>
                 </div>
             </div>
         </div>
