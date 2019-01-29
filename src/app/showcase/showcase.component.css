@@ -3294,8 +3294,7 @@ a.th {
         display: flex;
         flex-grow: 1;
         height: 100%;
-        position: relative;
-        width: 50%; }
+        position: relative; }
         .showcase-component .showcase-images .showcase-images-wrapper .images .inner-showcase-image-container {
           align-items: center;
           background-color: rgba(84, 94, 105, 0.5);

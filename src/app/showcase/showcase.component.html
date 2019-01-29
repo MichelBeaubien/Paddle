@@ -33,32 +33,102 @@
             </div>
         </div>
 
-        <div class="showcase-images-wrapper" [class.show]="showCase === 'Canada'" [class.showAll]="showEverything">
-            <div class="images" *ngFor="let img of images.canada" [style.backgroundImage]="'url('+ img +')'"></div>
+        <div class="showcase-images-wrapper"
+             [class.show]="showCase === 'Canada'"
+             [class.showAll]="showEverything">
+            <div class="images" *ngFor="let img of images.canada; let i = index;"
+                 [style.backgroundImage]="'url('+ img +')'">
+                <div class="inner-showcase-image-container transition">
+                    <h3>Canada Image {{i+1}}</h3>
+                    <button>
+                        <i class="fa fa-expand" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <div class="showcase-images-wrapper" [class.show]="showCase === 'Cartoon'" [class.showAll]="showEverything">
-            <div class="images" *ngFor="let img of images.cartoon" [style.backgroundImage]="'url('+ img +')'"></div>
+        <div class="showcase-images-wrapper"
+             [class.show]="showCase === 'Cartoon'"
+             [class.showAll]="showEverything">
+            <div class="images" *ngFor="let img of images.cartoon; let i = index;"
+                 [style.backgroundImage]="'url('+ img +')'">
+                <div class="inner-showcase-image-container transition">
+                    <h3>Cartoon Image {{i+1}}</h3>
+                    <button>
+                        <i class="fa fa-expand" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <div class="showcase-images-wrapper" [class.show]="showCase === 'Fish'" [class.showAll]="showEverything">
-            <div class="images" *ngFor="let img of images.fish" [style.backgroundImage]="'url('+ img +')'"></div>
+        <div class="showcase-images-wrapper"
+             [class.show]="showCase === 'Fish'"
+             [class.showAll]="showEverything">
+            <div class="images" *ngFor="let img of images.fish; let i = index;"
+                 [style.backgroundImage]="'url('+ img +')'">
+                <div class="inner-showcase-image-container transition">
+                    <h3>Fish Image {{i+1}}</h3>
+                    <button>
+                        <i class="fa fa-expand" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <div class="showcase-images-wrapper" [class.show]="showCase === 'Hockey'" [class.showAll]="showEverything">
-            <div class="images" *ngFor="let img of images.hockey" [style.backgroundImage]="'url('+ img +')'"></div>
+        <div class="showcase-images-wrapper"
+             [class.show]="showCase === 'Hockey'"
+             [class.showAll]="showEverything">
+            <div class="images" *ngFor="let img of images.hockey; let i = index;"
+                 [style.backgroundImage]="'url('+ img +')'">
+                <div class="inner-showcase-image-container transition">
+                    <h3>Hockey Image {{i+1}}</h3>
+                    <button>
+                        <i class="fa fa-expand" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <div class="showcase-images-wrapper" [class.show]="showCase === 'Locations'" [class.showAll]="showEverything">
-            <div class="images" *ngFor="let img of images.locations" [style.backgroundImage]="'url('+ img +')'"></div>
+        <div class="showcase-images-wrapper"
+             [class.show]="showCase === 'Locations'"
+             [class.showAll]="showEverything">
+            <div class="images" *ngFor="let img of images.locations; let i = index;"
+                 [style.backgroundImage]="'url('+ img +')'">
+                <div class="inner-showcase-image-container transition">
+                    <h3>Location Image {{i+1}}</h3>
+                    <button>
+                        <i class="fa fa-expand" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <div class="showcase-images-wrapper" [class.show]="showCase === 'Pride'" [class.showAll]="showEverything">
-            <div class="images" *ngFor="let img of images.pride" [style.backgroundImage]="'url('+ img +')'"></div>
+        <div class="showcase-images-wrapper"
+             [class.show]="showCase === 'Pride'"
+             [class.showAll]="showEverything">
+            <div class="images" *ngFor="let img of images.pride; let i = index;"
+                 [style.backgroundImage]="'url('+ img +')'">
+                <div class="inner-showcase-image-container transition">
+                    <h3>Pride Image {{i+1}}</h3>
+                    <button>
+                        <i class="fa fa-expand" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <div class="showcase-images-wrapper" [class.show]="showCase === 'Wilderness'" [class.showAll]="showEverything">
-            <div class="images" *ngFor="let img of images.wilderness" [style.backgroundImage]="'url('+ img +')'"></div>
+        <div class="showcase-images-wrapper"
+             [class.show]="showCase === 'Wilderness'"
+             [class.showAll]="showEverything">
+            <div class="images" *ngFor="let img of images.wilderness; let i = index;"
+                 [style.backgroundImage]="'url('+ img +')'">
+                <div class="inner-showcase-image-container transition">
+                    <h3>Wilderness Image {{i+1}}</h3>
+                    <button>
+                        <i class="fa fa-expand" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
