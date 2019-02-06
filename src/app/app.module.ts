@@ -7,6 +7,7 @@ import {ShowcaseComponent} from './showcase/showcase.component';
 import {ContactComponent} from './contact/contact.component';
 import {RouterModule, Routes} from '@angular/router';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {FormsModule} from '@angular/forms';
 
 const routes: Routes = [
     {path: 'home', component: HomeComponent},
@@ -27,7 +28,8 @@ const routes: Routes = [
     imports: [
         BrowserModule,
         AppRoutingModule,
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes),
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]
