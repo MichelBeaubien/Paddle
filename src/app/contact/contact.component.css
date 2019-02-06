@@ -3201,6 +3201,7 @@ a.th {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  user-select: none;
   height: calc(100vh - 134px);
   max-height: calc(100vh - 134px);
   min-height: calc(100vh - 134px);
@@ -3226,5 +3227,12 @@ a.th {
       height: calc(100vh - 90px);
       max-height: calc(100vh - 90px);
       min-height: calc(100vh - 90px); } }
+
+.contact-component .button {
+  pointer-events: none;
+  opacity: 0.5; }
+  .contact-component .button.is-valid {
+    pointer-events: unset;
+    opacity: 1; }
 
 /*# sourceMappingURL=contact.component.css.map */

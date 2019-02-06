@@ -3201,6 +3201,7 @@ a.th {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  user-select: none;
   height: calc(100vh - 134px);
   max-height: calc(100vh - 134px);
   min-height: calc(100vh - 134px);

@@ -6,6 +6,7 @@
     max-height: calc(100vh - 134px);
     min-height: calc(100vh - 134px);
     overflow: auto;
+    user-select: none;
 
     &::-webkit-scrollbar {
         -webkit-appearance: none;

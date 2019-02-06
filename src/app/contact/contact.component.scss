@@ -2,5 +2,13 @@
 @import '../../assets/public/styles/common';
 
 .contact-component {
+    .button {
+        pointer-events: none;
+        opacity: 0.5;
 
+        &.is-valid {
+            pointer-events: unset;
+            opacity: 1;
+        }
+    }
 }
