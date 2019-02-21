@@ -3,6 +3,7 @@
 .header {
     align-items: flex-end;
     background-color: $grey;
+    border-bottom: thin solid $primary-color;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

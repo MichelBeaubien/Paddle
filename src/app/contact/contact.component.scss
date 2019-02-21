@@ -2,13 +2,186 @@
 @import '../../assets/public/styles/common';
 
 .contact-component {
-    .button {
-        pointer-events: none;
-        opacity: 0.5;
+    align-items: center;
+    background-color: $grey;
+    justify-content: center;
 
-        &.is-valid {
-            pointer-events: unset;
-            opacity: 1;
+    .inner-contact-component {
+        display: flex;
+        flex-direction: column;
+        max-width: 90%;
+        width: 100%;
+
+        .left-side {
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+
+            h3,
+            p {
+                color: $white;
+            }
+
+            h3 {
+                font-size: 50px;
+                line-height: 46px;
+                margin: 0;
+                text-shadow: -1px 1px 0 #333, -2px 2px 0 #333, -3px 3px 0 #333, -4px 4px 0 #333, -5px 5px 0 #333;
+            }
+
+            p {
+                font-size: 12px;
+                font-style: italic;
+                margin-top: 10px;
+                text-shadow: -1px 1px 0 #333;
+            }
+        }
+
+        .right-side {
+            display: flex;
+
+            .form {
+                align-items: flex-start;
+                display: flex;
+                flex: none;
+                flex-direction: column;
+                justify-content: flex-start;
+                width: 100%;
+
+                .form-group {
+                    background-color: $white;
+                    border-bottom: thin solid $lightGrey;
+                    display: flex;
+                    flex-direction: column;
+                    min-height: 50px;
+                    width: 100%;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    .inner-form-group {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                    }
+
+                    .form-label {
+                        align-items: center;
+                        border-right: thin solid $lightGrey;
+                        color: $lightGrey;
+                        cursor: pointer;
+                        display: flex;
+                        font-size: 18px;
+                        justify-content: center;
+                        min-height: 50px;
+                        padding: 5px 10px;
+                        width: 50px;
+
+                        &:hover,
+                        &:focus {
+                            border-right-color: $grey;
+                            color: $grey;
+                        }
+
+                        .icon {
+                            &.is-invalid {
+                                color: $red;
+
+                                &::before {
+                                    content: '\f071';
+                                }
+                            }
+                        }
+
+                        &.textarea-label {
+                            align-items: flex-start;
+                        }
+                    }
+
+                    .form-input {
+                        align-items: center;
+                        border: none;
+                        color: $grey;
+                        display: flex;
+                        flex-grow: 1;
+                        font-size: 14px;
+                        justify-content: flex-start;
+                        padding: 5px 10px;
+                        text-align: left;
+
+                        &::placeholder {
+                            color: $lightGrey;
+                            font-size: 12px;
+                        }
+
+                        &:hover,
+                        &:focus {
+                            &::placeholder {
+                                color: $grey;
+                            }
+                        }
+
+                        &.form-textarea {
+                            min-height: 100px;
+                            resize: none;
+                        }
+
+                        &.is-invalid {
+                            &::placeholder {
+                                color: $red;
+                            }
+                        }
+                    }
+
+                    .required {
+                        color: $red;
+                        width: 100%;
+                    }
+
+                    &.submit-form-group {
+                        align-items: flex-start;
+                        background-color: transparent;
+
+                        .button {
+                            align-items: center;
+                            background-color: $primary-color;
+                            border: none;
+                            color: $white;
+                            display: flex;
+                            height: 0;
+                            justify-content: center;
+                            opacity: 0;
+                            overflow: hidden;
+                            padding: 0;
+                            pointer-events: none;
+                            text-align: center;
+                            transition: all 0.3s ease-in-out;
+                            width: 100%;
+
+                            &.is-valid {
+                                height: 50px;
+                                opacity: 1;
+                                pointer-events: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media #{$small} {
+            flex-direction: row;
+        }
+
+        @media #{$medium} {
+            max-width: 75%;
+        }
+
+        @media #{$large} {
+            max-width: 60%;
         }
     }
 }

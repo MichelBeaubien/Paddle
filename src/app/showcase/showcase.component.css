@@ -3201,11 +3201,11 @@ a.th {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  user-select: none;
   height: calc(100vh - 134px);
   max-height: calc(100vh - 134px);
   min-height: calc(100vh - 134px);
-  overflow: auto; }
+  overflow: auto;
+  user-select: none; }
   .component-container::-webkit-scrollbar {
     -webkit-appearance: none; }
   .component-container::-webkit-scrollbar:vertical {
@@ -3232,7 +3232,6 @@ a.th {
   position: relative; }
   .showcase-component .showcase-button-wrapper {
     background-color: #545E69;
-    border-top: thin solid #FFF;
     display: flex;
     flex: none;
     padding: 0.5em;

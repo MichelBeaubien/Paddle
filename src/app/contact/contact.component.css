@@ -3201,11 +3201,11 @@ a.th {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  user-select: none;
   height: calc(100vh - 134px);
   max-height: calc(100vh - 134px);
   min-height: calc(100vh - 134px);
-  overflow: auto; }
+  overflow: auto;
+  user-select: none; }
   .component-container::-webkit-scrollbar {
     -webkit-appearance: none; }
   .component-container::-webkit-scrollbar:vertical {
@@ -3228,11 +3228,129 @@ a.th {
       max-height: calc(100vh - 90px);
       min-height: calc(100vh - 90px); } }
 
-.contact-component .button {
-  pointer-events: none;
-  opacity: 0.5; }
-  .contact-component .button.is-valid {
-    pointer-events: unset;
-    opacity: 1; }
+.contact-component {
+  align-items: center;
+  background-color: #545E69;
+  justify-content: center; }
+  .contact-component .inner-contact-component {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    width: 100%; }
+    .contact-component .inner-contact-component .left-side {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-bottom: 20px; }
+      .contact-component .inner-contact-component .left-side h3,
+      .contact-component .inner-contact-component .left-side p {
+        color: #FFF; }
+      .contact-component .inner-contact-component .left-side h3 {
+        font-size: 50px;
+        line-height: 46px;
+        margin: 0;
+        text-shadow: -1px 1px 0 #333, -2px 2px 0 #333, -3px 3px 0 #333, -4px 4px 0 #333, -5px 5px 0 #333; }
+      .contact-component .inner-contact-component .left-side p {
+        font-size: 12px;
+        font-style: italic;
+        margin-top: 10px;
+        text-shadow: -1px 1px 0 #333; }
+    .contact-component .inner-contact-component .right-side {
+      display: flex; }
+      .contact-component .inner-contact-component .right-side .form {
+        align-items: flex-start;
+        display: flex;
+        flex: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%; }
+        .contact-component .inner-contact-component .right-side .form .form-group {
+          background-color: #FFF;
+          border-bottom: thin solid #999999;
+          display: flex;
+          flex-direction: column;
+          min-height: 50px;
+          width: 100%; }
+          .contact-component .inner-contact-component .right-side .form .form-group:last-child {
+            border-bottom: none; }
+          .contact-component .inner-contact-component .right-side .form .form-group .inner-form-group {
+            display: flex;
+            flex-direction: row;
+            width: 100%; }
+          .contact-component .inner-contact-component .right-side .form .form-group .form-label {
+            align-items: center;
+            border-right: thin solid #999999;
+            color: #999999;
+            cursor: pointer;
+            display: flex;
+            font-size: 18px;
+            justify-content: center;
+            min-height: 50px;
+            padding: 5px 10px;
+            width: 50px; }
+            .contact-component .inner-contact-component .right-side .form .form-group .form-label:hover, .contact-component .inner-contact-component .right-side .form .form-group .form-label:focus {
+              border-right-color: #545E69;
+              color: #545E69; }
+            .contact-component .inner-contact-component .right-side .form .form-group .form-label .icon.is-invalid {
+              color: #BB0029; }
+              .contact-component .inner-contact-component .right-side .form .form-group .form-label .icon.is-invalid::before {
+                content: '\f071'; }
+            .contact-component .inner-contact-component .right-side .form .form-group .form-label.textarea-label {
+              align-items: flex-start; }
+          .contact-component .inner-contact-component .right-side .form .form-group .form-input {
+            align-items: center;
+            border: none;
+            color: #545E69;
+            display: flex;
+            flex-grow: 1;
+            font-size: 14px;
+            justify-content: flex-start;
+            padding: 5px 10px;
+            text-align: left; }
+            .contact-component .inner-contact-component .right-side .form .form-group .form-input::placeholder {
+              color: #999999;
+              font-size: 12px; }
+            .contact-component .inner-contact-component .right-side .form .form-group .form-input:hover::placeholder, .contact-component .inner-contact-component .right-side .form .form-group .form-input:focus::placeholder {
+              color: #545E69; }
+            .contact-component .inner-contact-component .right-side .form .form-group .form-input.form-textarea {
+              min-height: 100px;
+              resize: none; }
+            .contact-component .inner-contact-component .right-side .form .form-group .form-input.is-invalid::placeholder {
+              color: #BB0029; }
+          .contact-component .inner-contact-component .right-side .form .form-group .required {
+            color: #BB0029;
+            width: 100%; }
+          .contact-component .inner-contact-component .right-side .form .form-group.submit-form-group {
+            align-items: flex-start;
+            background-color: transparent; }
+            .contact-component .inner-contact-component .right-side .form .form-group.submit-form-group .button {
+              align-items: center;
+              background-color: #3F9EB7;
+              border: none;
+              color: #FFF;
+              display: flex;
+              height: 0;
+              justify-content: center;
+              opacity: 0;
+              overflow: hidden;
+              padding: 0;
+              pointer-events: none;
+              text-align: center;
+              transition: all 0.3s ease-in-out;
+              width: 100%; }
+              .contact-component .inner-contact-component .right-side .form .form-group.submit-form-group .button.is-valid {
+                height: 50px;
+                opacity: 1;
+                pointer-events: auto; }
+    @media only screen and (min-width: 641px) {
+      .contact-component .inner-contact-component {
+        flex-direction: row; } }
+    @media only screen and (min-width: 1024px) {
+      .contact-component .inner-contact-component {
+        max-width: 75%; } }
+    @media only screen and (min-width: 1440px) {
+      .contact-component .inner-contact-component {
+        max-width: 60%; } }
 
 /*# sourceMappingURL=contact.component.css.map */
